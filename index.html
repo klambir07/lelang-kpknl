@@ -12,10 +12,10 @@
   --bg:#f5f7f5;
   --card:#ffffff;
   --text:#1b1b1b;
-  --blue-dark:#0b3b6f; /* biru tua resmi */
+  --blue-dark:#0b3b6f;
 }
 *{box-sizing:border-box}
-body{font-family: 'Segoe UI', Arial, sans-serif;margin:0;background:var(--bg);color:var(--text);}
+body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:var(--bg);color:var(--text);}
 header{background:var(--card);display:flex;align-items:center;gap:16px;justify-content:center;padding:18px;border-bottom:1px solid rgba(0,0,0,0.04)}
 header img{height:60px}
 .header-text{text-align:center}
@@ -39,7 +39,7 @@ main{padding:28px 16px}
 .btn-green:active{transform:translateY(1px)}
 .footer{background:var(--blue-dark);color:#fff;padding:18px;text-align:center;font-size:14px}
 .note{max-width:1120px;margin:12px auto 30px;padding:8px 12px;color:#555;font-size:13px}
-@media (max-width:520px){header img{height:48px}.nama{font-size:14px}.harga{font-size:14px}} 
+@media (max-width:520px){header img{height:48px}.nama{font-size:14px}.harga{font-size:14px}}
 </style>
 </head>
 <body>
@@ -70,48 +70,37 @@ const catalog = [
 
 const products = {
   logam: [
-    {name:'Logam Mulia Antam 1000 Gram', desc:'Emas batangan Antam 1000 gram', price:'Rp 1.700.000.000', img:'images/gold1000.png', wa:'0817581254'},
-    {name:'Logam Mulia Antam 500 Gram', desc:'Emas batangan Antam 500 gram', price:'Rp 850.000.000', img:'images/gold500.png', wa:'0817581254'},
-    {name:'Logam Mulia Antam 250 Gram', desc:'Emas batangan Antam 250 gram', price:'Rp 425.000.000', img:'images/gold250.png', wa:'0817581254'},
-    {name:'Logam Mulia Antam 100 Gram', desc:'Emas batangan Antam 100 gram', price:'Rp 170.000.000', img:'images/gold100.png', wa:'0817581254'},
-    {name:'Logam Mulia Antam 50 Gram', desc:'Emas batangan Antam 50 gram', price:'Rp 85.000.000', img:'images/gold50.png', wa:'0817581254'},
-    {name:'Logam Mulia Antam 25 Gram', desc:'Emas batangan Antam 25 gram', price:'Rp 42.500.000', img:'images/gold25.png', wa:'0817581254'},
-    {name:'Logam Mulia Antam 10 Gram', desc:'Emas batangan Antam 10 gram', price:'Rp 17.000.000', img:'images/gold10.png', wa:'0817581254'}
+    {name:'Logam Mulia Antam 1000 Gram', desc:'Emas batangan Antam 1000 gram', price:'Rp 1.700.000.000', img:'images/gold1000gram.jpg', wa:'0817581254'},
+    {name:'Logam Mulia Antam 500 Gram', desc:'Emas batangan Antam 500 gram', price:'Rp 850.000.000', img:'images/gold500gram.jpg', wa:'0817581254'},
+    {name:'Logam Mulia Antam 250 Gram', desc:'Emas batangan Antam 250 gram', price:'Rp 425.000.000', img:'images/gold250gram.jpg', wa:'0817581254'},
+    {name:'Logam Mulia Antam 100 Gram', desc:'Emas batangan Antam 100 gram', price:'Rp 170.000.000', img:'images/gold100gram.jpg', wa:'0817581254'},
+    {name:'Logam Mulia Antam 50 Gram', desc:'Emas batangan Antam 50 gram', price:'Rp 85.000.000', img:'images/gold50gram.jpg', wa:'0817581254'},
+    {name:'Logam Mulia Antam 25 Gram', desc:'Emas batangan Antam 25 gram', price:'Rp 42.500.000', img:'images/gold25gram.jpg', wa:'0817581254'},
+    {name:'Logam Mulia Antam 10 Gram', desc:'Emas batangan Antam 10 gram', price:'Rp 17.000.000', img:'images/gold10gram.jpg', wa:'0817581254'}
   ],
   mobil: [
-    {name:'Toyota Land Cruiser 2025 3.3 GR-S', desc:'Automatic', price:'Rp 1.500.000.000', img:'images/landcruiser.png', wa:'0817581254'},
-    {name:'Toyota Voxy 2025 2.0 Van Wagon', desc:'Automatic', price:'Rp 320.000.000', img:'images/voxy.png', wa:'0817581254'},
-    {name:'Kijang Innova Zenix 2025 2.0 Q HV CVT TSS', desc:'Automatic', price:'Rp 370.000.000', img:'images/kijang_innova_zenix.png', wa:'0817581254'},
-    {name:'Honda Accord 2025 1.5 Sedan', desc:'Automatic', price:'Rp 430.000.000', img:'images/honda_accord.png', wa:'0817581254'},
-    {name:'Honda BR-V 2025 1.5 Prestige SUV', desc:'Automatic', price:'Rp 192.000.000', img:'images/honda_brv.png', wa:'0817581254'},
-    {name:'Honda Civic 2025 1.5 RS Sedan', desc:'Automatic', price:'Rp 360.000.000', img:'images/honda_civic.png', wa:'0817581254'},
-    {name:'Mercedes-Benz A35 2025 AMG 2.0', desc:'Automatic', price:'Rp 550.000.000', img:'images/mercedes_a35.png', wa:'0817581254'},
-    {name:'Mercedes-Benz A45 2025 AMG 4MATIC+ Hatchback', desc:'Automatic', price:'Rp 750.000.000', img:'images/mercedes_a45.png', wa:'0817581254'},
-    {name:'Mercedes-Benz A200 2025 Progressive Line', desc:'Automatic', price:'Rp 420.000.000', img:'images/mercedes_a200.png', wa:'0817581254'},
-    {name:'BMW X3 2.0 Drive20i xLine SUV 2025', desc:'Automatic', price:'Rp 600.000.000', img:'images/bmw_x3.png', wa:'0817581254'},
-    {name:'Pajero Sport 2025 2.4 DAKAR SUV', desc:'Automatic', price:'Rp 250.000.000', img:'images/pajero_sport.png', wa:'0817581254'},
-    {name:'Xpander Cross 2025 1.5 Cross Wagon', desc:'Automatic', price:'Rp 170.000.000', img:'images/xpander_cross.png', wa:'0817581254'},
-    {name:'Mazda CX-5 2025 2.5 AWD SUV', desc:'Automatic', price:'Rp 370.000.000', img:'images/mazda_cx5.png', wa:'0817581254'},
-    {name:'Mazda CX-30 Grand Touring 2025 Wagon RST', desc:'Automatic', price:'Rp -', img:'images/mazda_cx30.png', wa:'0817581254'}
+    {name:'Toyota Land Cruiser 2025 3.3 GR-S', desc:'Automatic', price:'Rp 1.500.000.000', img:'images/landcruiser.jpg', wa:'0817581254'},
+    {name:'Toyota Voxy 2025 2.0 Van Wagon', desc:'Automatic', price:'Rp 320.000.000', img:'images/voxy.jpg', wa:'0817581254'},
+    {name:'Kijang Innova Zenix 2025 2.0 Q HV CVT TSS', desc:'Automatic', price:'Rp 370.000.000', img:'images/kijanginnovazenit.jpg', wa:'0817581254'},
+    {name:'Honda Accord 2025 1.5 Sedan', desc:'Automatic', price:'Rp 430.000.000', img:'images/hondaaccord.jpg', wa:'0817581254'},
+    {name:'Honda BR-V 2025 1.5 Prestige SUV', desc:'Automatic', price:'Rp 192.000.000', img:'images/BR-V.jpg', wa:'0817581254'},
+    {name:'Honda Civic 2025 1.5 RS Sedan', desc:'Automatic', price:'Rp 360.000.000', img:'images/hondacivic.jpg', wa:'0817581254'},
+    {name:'Mercedes-Benz A35 2025 AMG 2.0', desc:'Automatic', price:'Rp 550.000.000', img:'images/mercedez-benzA35.jpg', wa:'0817581254'},
+    {name:'Mercedes-Benz A45 2025 AMG 4MATIC+', desc:'Automatic', price:'Rp 750.000.000', img:'images/mercedez-benza45.jpg', wa:'0817581254'},
+    {name:'Mercedes-Benz A200 2025 Progressive Line', desc:'Automatic', price:'Rp 420.000.000', img:'images/mercedez-benza200.jpg', wa:'0817581254'},
+    {name:'BMW X3 2.0 Drive20i xLine SUV 2025', desc:'Automatic', price:'Rp 600.000.000', img:'images/bmwX3.jpg', wa:'0817581254'},
+    {name:'Pajero Sport 2025 2.4 DAKAR SUV', desc:'Automatic', price:'Rp 250.000.000', img:'images/pajerosport.jpg', wa:'0817581254'},
+    {name:'Xpander Cross 2025 1.5 Cross Wagon', desc:'Automatic', price:'Rp 170.000.000', img:'images/xpandercross.jpg', wa:'0817581254'},
+    {name:'Mazda CX-5 2025 2.5 AWD SUV', desc:'Automatic', price:'Rp 370.000.000', img:'images/mazdac5.jpg', wa:'0817581254'},
+    {name:'Mazda CX-30 Grand Touring 2025', desc:'Automatic', price:'Rp -', img:'images/mazdacx30.jpg', wa:'0817581254'}
   ],
   tas: [
-    {name:'Hermès Lindy 26 Beige Marfa', desc:'Hermès', price:'Rp 106.000.000', img:'https://via.placeholder.com/600x400?text=Hermes+Lindy+26', wa:'0817581254'},
-    {name:'Hermès Birkin 25 Mauve Sylvestre', desc:'Hermès', price:'Rp 220.000.000', img:'https://via.placeholder.com/600x400?text=Hermes+Birkin+25', wa:'0817581254'},
-    {name:'Hermès Kelly 25 Vert Biscuit / Blanc Madame', desc:'Hermès', price:'Rp 217.000.000', img:'https://via.placeholder.com/600x400?text=Hermes+Kelly+25', wa:'0817581254'},
-    {name:'LOUIS VUITTON OnTheGo Organizer M15136', desc:'Louis Vuitton', price:'Rp 43.500.000', img:'https://via.placeholder.com/600x400?text=LV+OnTheGo', wa:'0817581254'},
-    {name:'LOUIS VUITTON Side Trunk MM Monogram', desc:'Louis Vuitton', price:'Rp 41.700.000', img:'https://via.placeholder.com/600x400?text=LV+Side+Trunk', wa:'0817581254'},
-    {name:'LOUIS VUITTON Vanity Chain Pouch M27049', desc:'Louis Vuitton', price:'Rp 35.000.000', img:'https://via.placeholder.com/600x400?text=LV+Vanity+Chain', wa:'0817581254'}
+    {name:'Hermès Lindy 26 Beige Marfa', desc:'Hermès', price:'Rp 106.000.000', img:'images/hermeslindy26.jpg', wa:'0817581254'},
+    {name:'Hermès Birkin 25 Mauve Sylvestre', desc:'Hermès', price:'Rp 220.000.000', img:'images/hermesbirkin25.jpg', wa:'0817581254'},
+    {name:'Hermès Kelly 25 Vert Biscuit / Blanc Madame', desc:'Hermès', price:'Rp 217.000.000', img:'images/hermeskelly25.jpg', wa:'0817581254'},
+    {name:'LOUIS VUITTON OnTheGo Organizer M15136', desc:'Louis Vuitton', price:'Rp 43.500.000', img:'images/louisvuittononthego.jpg', wa:'0817581254'}
   ],
-  jam: [
-    {name:'ROLEX Day-Date 40', desc:'Oyster, 40 mm, emas Everose — Ref 228235', price:'Rp 489.000.000', img:'images/rolex_daydate40.png', wa:'0817581254'},
-    {name:'ROLEX 1908', desc:'39 mm, emas kuning 18 karat — Ref 52508', price:'Rp 369.000.000', img:'images/rolex_1908.png', wa:'0817581254'},
-    {name:'ROLEX Lady-Datejust', desc:'Oyster, 28 mm, Oystersteel, emas putih & berlian — Ref 279384RBR', price:'Rp 178.000.000', img:'images/rolex_ladydatejust.png', wa:'0817581254'},
-    {name:'PATEK PHILIPPE Calatrava 6007G-001', desc:'Black Dial', price:'Rp 285.000.000', img:'images/patek_calatrava.png', wa:'0817581254'},
-    {name:'PATEK PHILIPPE Golden Ellipse 5738R-001', desc:'Black Dial', price:'Rp 306.000.000', img:'images/patek_goldenellipse.png', wa:'0817581254'},
-    {name:'PATEK PHILIPPE Twenty~4 7300/1200A-001', desc:'Blue Dial', price:'Rp 240.000.000', img:'images/patek_twenty4.png', wa:'0817581254'},
-    {name:'CARTIER Baignoire WB520008', desc:'Silver', price:'Rp 240.000.000', img:'images/cartier_baignoire.png', wa:'0817581254'},
-    {name:'CARTIER Santos De Skeleton WHSA0012', desc:'Automatic', price:'Rp 217.000.000', img:'images/cartier_santos.png', wa:'0817581254'}
-  ]
+  jam: []
 };
 
 // render katalog
@@ -152,8 +141,7 @@ function showProducts(id){
     });
   }
   produkArea.appendChild(grid);
-  // scroll to produk
-  window.scrollTo({top: document.getElementById('judul').offsetTop - 20, behavior:'smooth'});
+  window.scrollTo({top:document.getElementById('judul').offsetTop-20,behavior:'smooth'});
 }
 </script>
 </body>
